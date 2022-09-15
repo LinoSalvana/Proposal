@@ -1,2 +1,2 @@
-# Proposal
+# Genral Minecraft Stuff
 project
