@@ -1,2 +1,2 @@
-# Genral Minecraft Stuff
+# General Minecraft Stuff
 project
