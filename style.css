@@ -1,4 +1,50 @@
-html, body {
-  height: 100%;
-  width: 100%;
+@font-face
+{
+  font-family: "Minecrafter";
+  src: url("files/fonts/Minecrafter.ttf");
+}
+
+@font-face
+{
+  font-family: "Minecraftia";
+  src: url("files/fonts/Minecraftia.ttf");
+}
+
+h1 
+{
+  margin: auto;
+  width: 1200px;
+  background-color: rgba(92,255,92,0.4);
+  padding-bottom: 15px;
+
+  text-align: center;
+  color: #262626;
+  font-family: "Minecrafter";
+  font-size: 50px;
+}
+
+div
+{
+  margin: auto;
+  width: 1075px;
+  background-color: rgba(0,0,0,0.2);
+  padding: 8px;
+}
+
+p
+{
+  margin: auto;
+  width: 1050px;
+  
+  text-align: justify;
+  color: whitesmoke;
+  font-family: "Minecraftia";
+  font-size: 30px;
+}
+
+body
+{
+  background-image: url("files/images/DirtBG.jpg");
+  background-size: 170%;
+  background-position: center top;
 }
