@@ -1,20 +1,102 @@
+* {box-sizing: border-box}
+
+body, html
+{
+  margin: 0;
+}
+
 @font-face
 {
   font-family: "Minecrafter";
   src: url("files/fonts/Minecrafter.ttf");
 }
-
 @font-face
 {
   font-family: "Minecraftia";
   src: url("files/fonts/Minecraftia.ttf");
 }
 
-h1 
+.right
+{
+  text-align: right
+}
+
+.container
+{
+  margin: 40px auto;
+  width: 1100px;
+  background-color: rgba(0,0,0,0.3);
+  padding: 15px 20px;
+}
+
+p
 {
   margin: auto;
-  width: 1200px;
-  background-color: rgba(92,255,92,0.4);
+  
+  text-align: justify;
+  color: whitesmoke;
+  font-family: "Minecraftia";
+  font-size: 32px;
+}
+
+a:link
+{ 
+  color: lightskyblue;
+  font-family: "Minecrafter";
+  font-size: 40px;
+}
+a:hover
+{
+  color: #9edaff;
+}
+a:active
+{
+  color: lightskyblue;
+}
+a:visited
+{
+  color: #a485f9;
+}
+a:visited:hover
+{
+  color: #b59bfd;
+}
+a:visited:active
+{
+  color: #a485f9;
+}
+
+#single-player
+{
+  background-image: url("files/backgrounds/Single-PlayerBG.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  
+  position: relative;
+  min-height: 1080px;
+
+  box-shadow: 0px -100px 100px 0px black inset;
+}
+
+#multiplayer
+{
+  background-image: url("files/backgrounds/MultiplayerBG.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  position: relative;
+  min-height: 1080px;
+
+  box-shadow: 0px 100px 100px 0px black inset;
+}
+
+h1 
+{
+  margin: 40px auto;
+  width: 1250px;
+  background-color: rgba(92,255,92,0.5);
   padding-bottom: 15px;
 
   text-align: center;
@@ -23,28 +105,35 @@ h1
   font-size: 50px;
 }
 
-div
+h2
 {
   margin: auto;
-  width: 1075px;
-  background-color: rgba(0,0,0,0.2);
-  padding: 8px;
-}
-
-p
-{
-  margin: auto;
-  width: 1050px;
   
-  text-align: justify;
-  color: whitesmoke;
-  font-family: "Minecraftia";
-  font-size: 30px;
+  color: #262626;
+  font-family: "Minecrafter";
+  font-size: 40px;
 }
 
-body
+#home
 {
-  background-image: url("files/images/DirtBG.jpg");
-  background-size: 170%;
+  background-image: url("files/backgrounds/DirtBG.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   background-position: center top;
+}
+#GP
+{
+  background-color: black;
+}
+#GR
+{
+  background-image: url("files/backgrounds/DirtBG.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+
+#test
+{
+  font-size: 5000px;
 }
