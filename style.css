@@ -28,6 +28,10 @@ body, html
   background-color: rgba(0,0,0,0.3);
   padding: 15px 20px;
 }
+.container:hover
+{
+  background-color: rgba(0,0,0,0.4);
+}
 
 p
 {
@@ -66,30 +70,28 @@ a:visited:active
   color: #a485f9;
 }
 
-#single-player
+#single-player, #multiplayer
 {
-  background-image: url("files/backgrounds/Single-PlayerBG.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center top;
-  
-  position: relative;
-  min-height: 1080px;
-
-  box-shadow: 0px -100px 100px 0px black inset;
-}
-
-#multiplayer
-{
-  background-image: url("files/backgrounds/MultiplayerBG.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 
   position: relative;
   min-height: 1080px;
+}
+#single-player
+{
+  background-image: url("files/backgrounds/Single-PlayerBG.jpg");
+  padding: 1px 0px 75px;
 
-  box-shadow: 0px 100px 100px 0px black inset;
+  box-shadow: 0px -75px 100px -10px black inset, 0px -75px 100px -10px black inset;
+}
+#multiplayer
+{
+  background-image: url("files/backgrounds/MultiplayerBG.jpeg");
+  padding: 75px 0px 0px;
+
+  box-shadow: 0px 75px 100px -10px black inset, 0px 75px 100px -10px black inset;
 }
 
 h1 
@@ -102,14 +104,25 @@ h1
   text-align: center;
   color: #262626;
   font-family: "Minecrafter";
+}
+#home h1
+{
   font-size: 50px;
+}
+#GP h1
+{
+  font-size: 45px;
+}
+#GR h1
+{
+  font-size: 42px;
 }
 
 h2
 {
-  margin: auto;
+  margin: 0px auto 15px;
   
-  color: #262626;
+  color: #d6d6d6;
   font-family: "Minecrafter";
   font-size: 40px;
 }
@@ -120,6 +133,9 @@ h2
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
+  padding: 1px 0px;
+
+  box-shadow: 0px 0px 100px 20px black inset;
 }
 #GP
 {
@@ -131,9 +147,4 @@ h2
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
-}
-
-#test
-{
-  font-size: 5000px;
 }
