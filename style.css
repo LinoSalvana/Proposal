@@ -16,6 +16,75 @@ body, html
   src: url("files/fonts/Minecraftia.ttf");
 }
 
+.subiconnav
+{ 
+  position: fixed;
+  top: 50%;
+  left: 0%;
+  transform: translateY(-50%);
+
+  width: 100%;
+  z-index: 2;
+}
+.icon
+{
+  background-color: rgba(10,10,10,0.7);
+  border-radius: 0px 10px 10px 0px;
+  padding: 10px;
+  float: left;
+  clear: left;
+
+  width: 60px;
+  height: 60px;
+  transition: 1s;
+}
+.icon:hover
+{
+  background-color: rgba(35,35,35,0.6);
+  width: 300px;
+}
+
+.GP, .GR, .History, .MaM
+{ 
+  padding: 10px 0px;
+  position: absolute;
+  left: 60px;
+  
+  width: 0px;
+  height: 60px;
+  overflow: hidden;
+  transition: 1s;
+
+  color: whitesmoke;
+  font-family: "Minecraftia";
+  font-size: 40px;
+}
+
+.GR {top: 60px}
+.History {top: 120px}
+.MaM {top: 180px}
+
+.icon:hover + .GP
+{
+  width: 240px;
+  text-align: center;
+}
+.icon:hover + .GR
+{
+  width: 240px;
+  text-align: center;
+}
+.icon:hover + .History
+{
+  width: 240px;
+  text-align: center;
+}
+.icon:hover + .MaM
+{
+  width: 240px;
+  text-align: center;
+}
+
 .right
 {
   text-align: right
@@ -82,16 +151,22 @@ a:visited:active
 #single-player
 {
   background-image: url("files/backgrounds/Single-PlayerBG.jpg");
-  padding: 1px 0px 75px;
-
-  box-shadow: 0px -75px 100px -10px black inset, 0px -75px 100px -10px black inset;
+  padding: 1px 0px 200px;
 }
 #multiplayer
 {
   background-image: url("files/backgrounds/MultiplayerBG.jpeg");
-  padding: 75px 0px 0px;
+  padding: 200px 0px 0px;
+}
 
-  box-shadow: 0px 75px 100px -10px black inset, 0px 75px 100px -10px black inset;
+.transition
+{
+  background-color: black;
+  height: 50px;
+
+  position: relative;
+  z-index: 1;
+  box-shadow: 0px 0px 125px 200px black;
 }
 
 h1 
@@ -122,7 +197,7 @@ h2
 {
   margin: 0px auto 15px;
   
-  color: #d6d6d6;
+  color: lightgreen;
   font-family: "Minecrafter";
   font-size: 40px;
 }
@@ -133,9 +208,6 @@ h2
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
-  padding: 1px 0px;
-
-  box-shadow: 0px 0px 100px 20px black inset;
 }
 #GP
 {
@@ -143,8 +215,8 @@ h2
 }
 #GR
 {
-  background-image: url("files/backgrounds/DirtBG.jpg");
+  background-image: url("files/backgrounds/LibraryBG.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center top;
+  background-position: top right;
 }
