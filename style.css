@@ -1,109 +1,214 @@
 * {box-sizing: border-box}
 
-body, html
-{
+body, html {
   margin: 0;
 }
 
-@font-face
-{
+
+
+@font-face {
   font-family: "Minecrafter";
   src: url("files/fonts/Minecrafter.ttf");
 }
-@font-face
-{
+@font-face {
   font-family: "Minecraftia";
   src: url("files/fonts/Minecraftia.ttf");
 }
 
-.subiconnav
-{ 
+
+
+@keyframes subiconnav {
+  from {left: -60px;}
+  to {left: 0px;}
+}
+@keyframes homenav {
+  from {right: -60px;}
+  to {right: 0px;}
+}
+
+
+
+.subiconnav { 
   position: fixed;
   top: 50%;
-  left: 0%;
+  left: -60px;
+  z-index: 2;
+  
   transform: translateY(-50%);
 
+  animation: subiconnav 1s forwards;
+  
   width: 100%;
-  z-index: 2;
 }
-.icon
-{
+
+
+
+.XimgX {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  transition: 1s;
+
+  opacity: 0.3;
+}
+
+
+
+.icon, .XiconX {
   background-color: rgba(10,10,10,0.7);
-  border-radius: 0px 10px 10px 0px;
+  
   padding: 10px;
-  float: left;
-  clear: left;
 
   width: 60px;
   height: 60px;
+  
   transition: 1s;
 }
-.icon:hover
-{
+
+
+
+.subiconnav > div {
+  border-radius: 0px 10px 10px 0px;
+
+  float: left;
+  clear: left;
+}
+
+
+
+.icon:hover {
   background-color: rgba(35,35,35,0.6);
   width: 300px;
 }
+.XiconX:hover {
+  background-color: rgba(75,10,10,0.6);
+}
+.XiconX:hover .XimgX {
+  opacity: 0.4;
+}
 
-.GP, .GR, .History, .MaM
-{ 
+
+
+.subiconnav > span {
   padding: 10px 0px;
+  
   position: absolute;
   left: 60px;
   
   width: 0px;
   height: 60px;
+  
   overflow: hidden;
   transition: 1s;
 
+  white-space: nowrap;
+  text-align: center;
   color: whitesmoke;
   font-family: "Minecraftia";
   font-size: 40px;
+}
+.subiconnav > span > span {
+  position: absolute;
+  left: 110px;
+  
+  width: min-content;
+
+  transform: translateX(-50%);
 }
 
 .GR {top: 60px}
 .History {top: 120px}
 .MaM {top: 180px}
 
-.icon:hover + .GP
-{
+.icon:hover + span {
   width: 240px;
-  text-align: center;
-}
-.icon:hover + .GR
-{
-  width: 240px;
-  text-align: center;
-}
-.icon:hover + .History
-{
-  width: 240px;
-  text-align: center;
-}
-.icon:hover + .MaM
-{
-  width: 240px;
-  text-align: center;
 }
 
-.right
-{
+
+
+.homenav {
+  position: fixed;
+  top: 50%;
+  right: -60px;
+  z-index: 2;
+  
+  transform: translateY(-50%);
+
+  animation: homenav 1s forwards;
+
+  width: 100%;
+}
+
+
+
+.homenav > div {
+  border-radius: 10px 0px 0px 10px;
+
+  float: right;
+  clear: right;
+}
+
+
+
+.iconright {
+  position:absolute;
+  right: 10px;
+}
+
+
+
+.homenav > span {
+  padding: 10px 0px;
+  
+  position: absolute;
+  right: 60px;
+  
+  width: 0px;
+  height: 60px;
+  
+  overflow: hidden;
+  transition: 1s;
+
+  white-space: nowrap;
+  text-align: center;
+  color: whitesmoke;
+  font-family: "Minecraftia";
+  font-size: 40px;
+}
+.homenav > span > span {
+  position: absolute;
+  right: 110px;
+  
+  width: min-content;
+
+  transform: translateX(50%);
+}
+
+
+
+.right {
   text-align: right
 }
 
-.container
-{
+
+
+.container {
   margin: 40px auto;
+  
   width: 1100px;
+  
   background-color: rgba(0,0,0,0.3);
+  
   padding: 15px 20px;
 }
-.container:hover
-{
+.container:hover {
   background-color: rgba(0,0,0,0.4);
 }
 
-p
-{
+
+
+p {
   margin: auto;
   
   text-align: justify;
@@ -112,89 +217,98 @@ p
   font-size: 32px;
 }
 
-a:link
-{ 
+
+
+a:link { 
   color: lightskyblue;
   font-family: "Minecrafter";
   font-size: 40px;
 }
-a:hover
-{
+a:hover {
   color: #9edaff;
 }
-a:active
-{
+a:active {
   color: lightskyblue;
 }
-a:visited
-{
+
+
+
+a:visited {
   color: #a485f9;
 }
-a:visited:hover
-{
+a:visited:hover {
   color: #b59bfd;
 }
-a:visited:active
-{
+a:visited:active {
   color: #a485f9;
 }
 
-#single-player, #multiplayer
-{
+
+
+#single-player, #multiplayer {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 
   position: relative;
+  
   min-height: 1080px;
 }
-#single-player
-{
+#single-player {
   background-image: url("files/backgrounds/Single-PlayerBG.jpg");
+  
   padding: 1px 0px 200px;
 }
-#multiplayer
-{
+#multiplayer {
   background-image: url("files/backgrounds/MultiplayerBG.jpeg");
+  
   padding: 200px 0px 0px;
 }
 
-.transition
-{
+
+
+.transition {
   background-color: black;
+  
   height: 50px;
 
   position: relative;
   z-index: 1;
+  
   box-shadow: 0px 0px 125px 200px black;
 }
 
-h1 
-{
+
+
+h1  {
   margin: 40px auto;
+  
   width: 1250px;
+  
   background-color: rgba(92,255,92,0.5);
+  
   padding-bottom: 15px;
 
   text-align: center;
   color: #262626;
   font-family: "Minecrafter";
 }
-#home h1
-{
+
+
+
+#home h1 {
   font-size: 50px;
 }
-#GP h1
-{
+#GP h1 {
   font-size: 45px;
 }
-#GR h1
-{
+#GR h1 {
   font-size: 42px;
 }
 
-h2
-{
+
+
+h2 {
   margin: 0px auto 15px;
   
   color: lightgreen;
@@ -202,19 +316,18 @@ h2
   font-size: 40px;
 }
 
-#home
-{
+
+
+#home {
   background-image: url("files/backgrounds/DirtBG.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
 }
-#GP
-{
+#GP {
   background-color: black;
 }
-#GR
-{
+#GR {
   background-image: url("files/backgrounds/LibraryBG.png");
   background-repeat: no-repeat;
   background-size: cover;
