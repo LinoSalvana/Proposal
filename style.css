@@ -1,11 +1,5 @@
 * {box-sizing: border-box}
 
-body, html {
-  margin: 0;
-}
-
-
-
 @font-face {
   font-family: "Minecrafter";
   src: url("files/fonts/Minecrafter.ttf");
@@ -13,6 +7,14 @@ body, html {
 @font-face {
   font-family: "Minecraftia";
   src: url("files/fonts/Minecraftia.ttf");
+}
+
+
+
+body, html {
+  margin: 0;
+  color: whitesmoke;
+  font-family: "Minecraftia";
 }
 
 
@@ -25,6 +27,17 @@ body, html {
   from {right: -60px;}
   to {right: 0px;}
 }
+@keyframes references {
+  from {bottom: -40px;}
+  to {bottom: 0px;}
+}
+
+
+
+
+
+
+
 
 
 
@@ -36,9 +49,9 @@ body, html {
   
   transform: translateY(-50%);
 
-  animation: subiconnav 1s forwards;
+  animation: subiconnav 1.5s forwards;
   
-  width: 100%;
+  width: min-content;
 }
 
 
@@ -47,8 +60,6 @@ body, html {
   position: absolute;
   top: 0px;
   left: 0px;
-
-  transition: 1s;
 
   opacity: 0.3;
 }
@@ -65,27 +76,18 @@ body, html {
   
   transition: 1s;
 }
+.XiconX {
+  transition: 0.5s;
+}
 
 
 
 .subiconnav > div {
   border-radius: 0px 10px 10px 0px;
 
+
   float: left;
   clear: left;
-}
-
-
-
-.icon:hover {
-  background-color: rgba(35,35,35,0.6);
-  width: 300px;
-}
-.XiconX:hover {
-  background-color: rgba(75,10,10,0.6);
-}
-.XiconX:hover .XimgX {
-  opacity: 0.4;
 }
 
 
@@ -104,8 +106,6 @@ body, html {
 
   white-space: nowrap;
   text-align: center;
-  color: whitesmoke;
-  font-family: "Minecraftia";
   font-size: 40px;
 }
 .subiconnav > span > span {
@@ -121,9 +121,25 @@ body, html {
 .History {top: 120px}
 .MaM {top: 180px}
 
-.icon:hover + span {
+
+
+div.icon:hover {
+  background-color: rgba(35,35,35,0.6);
+  width: 300px;
+}
+div.XiconX:hover {
+  background-color: rgba(50,0,0,0.6);
+}
+div.icon:hover + span {
   width: 240px;
 }
+
+
+
+
+
+
+
 
 
 
@@ -135,9 +151,9 @@ body, html {
   
   transform: translateY(-50%);
 
-  animation: homenav 1s forwards;
+  animation: homenav 1.5s forwards;
 
-  width: 100%;
+  width: min-content;
 }
 
 
@@ -172,8 +188,6 @@ body, html {
 
   white-space: nowrap;
   text-align: center;
-  color: whitesmoke;
-  font-family: "Minecraftia";
   font-size: 40px;
 }
 .homenav > span > span {
@@ -184,6 +198,85 @@ body, html {
 
   transform: translateX(50%);
 }
+
+
+
+
+
+
+
+
+
+
+.references {
+  position: fixed;
+  bottom: -40px;
+  z-index: 2;
+
+  animation: references 1.5s forwards;
+
+  width: 100vw;
+  height: min-content;
+}
+
+
+
+.reficon {
+  border-radius: 15px 15px 0px 0px;
+  
+  background-color: rgba(10,10,10,0.7);
+
+  margin: auto;
+
+  width: 70px;
+  height: 35px;
+
+  text-align: center;
+  font-size: 45px;
+}
+
+
+
+.refcontainer {
+  background-color: rgba(10,10,10,0.7);
+
+  overflow: auto;
+  transition: 1.25s;
+  
+  width: 100vw;
+  height: 0vh;
+}
+
+
+
+.reficon:hover + .refcontainer, .refcontainer:hover {
+  background-color: rgba(10,10,10,0.85);
+  height: 40vh;
+}
+
+
+
+ol {
+  margin: 20px;
+}
+li, li > a {
+  color: whitesmoke;
+  
+  font-family: "Minecraftia";
+  font-size: 24px;
+  
+  text-decoration: none;
+}
+li {
+  margin: 20px 0px;
+}
+
+
+
+
+
+
+
 
 
 
@@ -212,36 +305,24 @@ p {
   margin: auto;
   
   text-align: justify;
-  color: whitesmoke;
-  font-family: "Minecraftia";
   font-size: 32px;
 }
 
 
 
-a:link { 
+a.subpage:link { 
   color: lightskyblue;
   font-family: "Minecrafter";
   font-size: 40px;
 }
-a:hover {
-  color: #9edaff;
-}
-a:active {
-  color: lightskyblue;
-}
+a.subpage:hover {color: #9edaff;}
+a.subpage:active {color: lightskyblue;}
 
 
 
-a:visited {
-  color: #a485f9;
-}
-a:visited:hover {
-  color: #b59bfd;
-}
-a:visited:active {
-  color: #a485f9;
-}
+a.subpage:visited {color: #a485f9;}
+a.subpage:visited:hover {color: #b59bfd;}
+a.subpage:visited:active {color: #a485f9;}
 
 
 
@@ -309,11 +390,18 @@ h1  {
 
 
 h2 {
-  margin: 0px auto 15px;
+  padding-bottom: 12px;
   
   color: lightgreen;
   font-family: "Minecrafter";
+}
+.header {
+  margin: 0px 25px 15px;
   font-size: 40px;
+}
+.references h2 {
+  margin: 20px 20px 0px;
+  font-size: 32px;
 }
 
 
