@@ -380,7 +380,7 @@ h1  {
 #home h1 {
   font-size: 50px;
 }
-#GP h1 {
+#GP h1, #History h1 {
   font-size: 45px;
 }
 #GR h1 {
@@ -407,17 +407,29 @@ h2 {
 
 
 #home {
-  background-image: url("files/backgrounds/DirtBG.jpg");
-  background-repeat: no-repeat;
+  background: url("files/backgrounds/DirtBG.jpg") no-repeat fixed center top;
   background-size: cover;
-  background-position: center top;
 }
 #GP {
   background-color: black;
 }
 #GR {
-  background-image: url("files/backgrounds/LibraryBG.png");
-  background-repeat: no-repeat;
+  background: url("files/backgrounds/LibraryBG.png") no-repeat fixed top right;
   background-size: cover;
-  background-position: top right;
+}
+
+.background {
+  border: 0;
+  
+  position: fixed;
+  top: 0;
+
+  width: 100vw;
+  height: 100vh;
+}
+iframe.background {
+  z-index: -2;
+}
+div.background {
+  z-index: -1;
 }
