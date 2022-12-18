@@ -232,7 +232,7 @@ div.icon:hover + span {
   bottom: 0px;
   z-index: 20;
 
-  width: 100vw;
+  width: 100%;
   height: min-content;
 }
 
@@ -263,12 +263,15 @@ div.icon:hover + span {
 
 
 #refcontainer {
+  border: 1px solid yellow;
   background-color: rgba(10,10,10,0.8);
 
   overflow: auto;
   transition: 1.25s;
+
+  padding: 30px;
   
-  width: 100vw;
+  width: 100%;
   height: 0vh;
 
   opacity: 0;
@@ -360,8 +363,141 @@ div.icon:hover + span {
 
 
 
+#refcontainer h2 {
+  margin: 0px;
+
+  text-align: center;
+  font-size: 36px;
+}
+
+#refcontainer > section:not(:first-of-type) {
+  margin-top: 100px;
+}
+
+#refcontainer h3 {
+  color: #4c4c4c;
+  text-align: center;
+}
+
+#refcontainer p {
+  text-align: center;
+  font-size: 28px;
+}
+
+
+
+.flex, .flexsprite {
+  margin: auto;
+
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.flexsprite {
+  width: 25%;
+}
+
+.flexsprite > section {
+  margin: 0px;
+
+  width: 42%;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+#refcontainer .margintop {
+  margin-top: 30px;
+}
+
+
+
+.flex {
+  width: 50%;
+}
+
+.flex h3, .flex .flexsprite {
+  margin: 0px;
+
+  width: 50%;
+}
+
+
+
+.spriteborder {
+  box-sizing: content-box;
+  
+  border: 4px solid whitesmoke;
+  border-radius: 50%;
+
+  padding: 5px;
+  margin: 10px;
+
+  width: 32px;
+  height: 32px;
+}
+
+
+
+.Minecraft, .Xbox, .GooglePlay, .AppStore, .Fandom {
+  background: url("/files/sprites/LinkSprites.png") no-repeat;
+
+  width: 32px;
+  height: 32px;
+
+  display: block;
+}
+
+
+
+.Minecraft {
+  background-position: 0px 0px;
+}
+.Minecraft:hover {
+  background-position: 0px -32px;
+}
+
+.Xbox {
+  background-position: -32px 0px;
+}
+.Xbox:hover {
+  background-position: -32px -32px;
+}
+
+.GooglePlay {
+  background-position: -64px 0px;
+
+  transform: translateX(1px);
+}
+.GooglePlay:hover {
+  background-position: -64px -32px;
+}
+
+.AppStore {
+  background-position: -96px 0px;
+
+  transform: scale(0.9, 0.9);
+}
+.AppStore:hover {
+  background-position: -96px -32px;
+}
+
+.Fandom {
+  background-position: -128px 0px;
+}
+.Fandom:hover {
+  background-position: -128px -32px;
+}
+
+
+
 ol {
-  margin: 20px;
+  margin: 0px;
 }
 li, li > a {
   color: whitesmoke;
@@ -372,7 +508,7 @@ li, li > a {
   text-decoration: none;
 }
 li {
-  margin: 20px 0px;
+  margin: 20px;
 }
 
 
@@ -494,18 +630,22 @@ h1  {
 
 
 h2 {
-  padding-bottom: 12px;
+  padding-bottom: 10px;
   
-  color: lightgreen;
+  color: #7cee7c;
   font-family: "Minecrafter";
+}
+h3 {
+  padding-bottom: 10px;
+  margin: 0px;
+  
+  color: #262626;
+  font-family: "Minecrafter";
+  font-size: 28px;
 }
 .header {
   margin: 0px 25px 15px;
   font-size: 40px;
-}
-.references h2 {
-  margin: 20px 20px 0px;
-  font-size: 32px;
 }
 
 
